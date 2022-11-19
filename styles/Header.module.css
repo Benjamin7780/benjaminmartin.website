@@ -1,0 +1,32 @@
+.Header{
+    height: 5vh;
+}
+.nav{
+    height: 100%;
+}
+.ul{
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    text-decoration: none;
+    list-style-type: none;
+    height: 100%;
+}
+.ul li{
+    margin: 0px 5px;
+    height: 100%;
+}
+
+.ul li button{
+    border: 0;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.ul li button:hover{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    color: #c4005a;
+    transition: all .3s linear;
+}

@@ -1,0 +1,54 @@
+.divContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.divContainer div img{
+    justify-self: center;
+}
+
+@keyframes transitions{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.myname{
+    font-size: 5rem;
+    margin: 0;
+    transition: .3s linear;
+}
+
+.myname:hover{
+    
+    background: linear-gradient(-45deg, #c4005a, #84005a, #ED0759);
+    background-size: 400%;
+    animation: transitions 10s infinite;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: .3s linear;
+}
+
+.yearsOld{
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.introduction{
+    align-self: center;
+    width: 50%;
+    font-size: 2rem;
+}
+
+.experience{
+    align-self: center;
+    font-size: 2rem;
+    width: 50%;
+}

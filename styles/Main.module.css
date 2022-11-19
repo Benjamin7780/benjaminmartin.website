@@ -1,0 +1,90 @@
+#myname{
+    text-align: center;
+    font-size: 3rem;
+  }
+  #title{
+    font-size: 10rem;
+    text-align: center;
+    margin: 1% 0px;
+  }
+  
+  #intrinsecTitle{
+    background: linear-gradient(90deg, #c4005a, #84005a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  #intrinsecTitle:after{
+    content: "|";
+    font-size: 19rem;
+    font-weight: 300;
+    vertical-align: middle;
+    animation: blink .5s infinite;
+  }
+
+  @keyframes blink {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 100;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
+  
+  #skillsContainer{
+    display: grid;
+    grid-template-columns: 399px repeat(auto-fill, 400px) 400px;
+    place-items: center;
+    max-width: 1200px;
+    margin: auto;
+    column-gap: .3vw;
+  }
+  
+  .blurHover{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+    accent-color: #c4005a;
+    margin: .3vh 0px .3vh 0px;
+    outline: 1.5px solid #292929;
+    padding: 0px 100px;
+  }
+  
+  .blurHover progress{
+    margin: 0px 5px 0px 5px;
+  }
+  
+  .blurHover:after{
+    content: "";
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    border-radius: 100%;
+    background: rgba(255, 255, 255);
+    top: calc(var(--y-axis, 0) * 1px);
+    left: calc(var(--x-axis, 0) * 1px);
+    pointer-events: none;
+    padding-bottom: 50%;
+    
+    
+  }
+  
+  .blurHover:hover{
+    outline: 1px solid #FFFFFF;
+    transition: all .3s ease-in-out;
+  }
+  
+  .blurHover:hover::after{
+    opacity: .15;
+    transition: opacity .2s linear;
+  }
